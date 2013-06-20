@@ -135,6 +135,27 @@
           self.bounds.size.width,
           self.bounds.size.height);
     
+    
+    
+    
+    
+    // drawing a bezier path
+    UIBezierPath *aPath = [UIBezierPath bezierPathWithRect:CGRectMake(-50.0, -200.0, 100.0, 80.0)];
+    
+    [[UIColor blackColor] setStroke];
+    [[UIColor redColor] setFill];
+    
+    
+    // Adjust the drawing options as needed.
+    aPath.lineWidth = 1;
+
+    
+    // Fill the path before stroking it so that the fill
+    // color does not obscure the stroked line.
+    [aPath fill];
+    [aPath stroke];
+
+    
 }
 
 -(NSString *)description {
