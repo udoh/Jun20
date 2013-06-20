@@ -123,7 +123,8 @@
     point = CGPointMake(-size.width / 2, -size.height / 2);
     [self.theString drawAtPoint:point withFont:font];
     
-    NSString *lineTwo = @"Hello, World!";
+    // Draw foreign character set
+    NSString *lineTwo = @"ნღძႳႢ!";
     CGSize sizeTwo = [lineTwo sizeWithFont:font];
     CGContextSetRGBFillColor(UIGraphicsGetCurrentContext(), 0.1, 0.1, 1.0, 1.0);
 	CGPoint pointTwo = CGPointMake(-sizeTwo.width / 2, (-sizeTwo.height / 2) + 100);
@@ -136,26 +137,19 @@
           self.bounds.size.height);
     
     
-    
-    
-    
-    // drawing a bezier path
+    // Drawing a bezier path
     UIBezierPath *aPath = [UIBezierPath bezierPathWithRect:CGRectMake(-50.0, -200.0, 100.0, 80.0)];
     
     [[UIColor blackColor] setStroke];
     [[UIColor redColor] setFill];
     
-    
     // Adjust the drawing options as needed.
     aPath.lineWidth = 1;
 
-    
     // Fill the path before stroking it so that the fill
     // color does not obscure the stroked line.
     [aPath fill];
     [aPath stroke];
-
-    
 }
 
 -(NSString *)description {
